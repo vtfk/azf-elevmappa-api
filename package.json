@@ -1,0 +1,23 @@
+{
+  "name": "azf-elevmappa-api",
+  "version": "0.0.1",
+  "description": "Backend API for Elevmappa",
+  "scripts": {
+    "test": "standard"
+  },
+  "author": {
+    "name": "Rune Moskvil Lyngås",
+    "email": "rune.moskvil.lyngaas@vtfk.no",
+    "url": "https://github.com/runely"
+  },
+  "devDependencies": {
+    "@types/jest": "28.1.6",
+    "jest": "28.1.3",
+    "standard": "17.0.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  }
+}
