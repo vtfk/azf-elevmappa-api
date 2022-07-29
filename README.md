@@ -14,7 +14,7 @@ Returns an array of students
 
 ```JavaScript
 [
- {
+  {
     "firstName": "Helga",
     "middleName": null,
     "lastName": "Durk",
@@ -38,8 +38,8 @@ Returns an array of students
         "organizationNumber": "NO974568098"
       }
     ]
- },
- {
+  },
+  {
     "firstName": "Halgrim",
     "middleName": "",
     "lastName": "Durk",
@@ -163,10 +163,10 @@ Returns an object of given student with available documents
 **body**
 ```json
 {
-	"source": "VTFK Sikker",
-	"fileId": "20/00345-1",
-	"recno": 1234,
-	"studentId": "0205helgeg"
+  "source": "VTFK Sikker",
+  "fileId": "20/00345-1",
+  "recno": 1234,
+  "studentId": "0205helgeg"
 }
 ```
 
