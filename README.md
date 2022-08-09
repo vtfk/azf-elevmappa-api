@@ -240,11 +240,11 @@ You add a source as a series of well named environment variables in `local.setti
 "P360_VTFKINT_USERNAME": "username", // only used for SOAP, can and should be ignored for RPC
 "P360_VTFKINT_PASSWORD": "password", // only used for SOAP, can and should be ignored for RPC
 "P360_VTFKINT_BASEURL": "http://360server.com:3001",
-"P360_VTFKINT_STATUSES": "Under behandling,Avsluttet" // 'Under behandling' is used for archives in production. 'Avsluttet' is used for historical archives. If this one is left out, 'Under behandling' will be used! Can contain multiple values separated by ',' (comma)
+"P360_VTFKINT_STATUSES": "Under behandling,Avsluttet", // 'Under behandling' is used for archives in production. 'Avsluttet' is used for historical archives. If this one is left out, 'Under behandling' will be used! Can contain multiple values separated by ',' (comma)
 "P360_VTFKINT_STATUSCODES": "J,E,F" // 'J' is for Journalført. 'E' is for Ekspedert. 'F' is for Ferdig. If this one is left out, 'J,E,F' will be used! Can contain multiple values separated by ',' (comma)
 ```
 
-This will be constructed to a soure object like this:
+This will be constructed to a source object like this:
 ```json
 {
   "internal": "VTFKINT",
