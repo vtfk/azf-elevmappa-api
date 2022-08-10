@@ -5,7 +5,7 @@ const generateResponse = require('../lib/generate-response')
 const { getFile } = require('../lib/handler')
 
 const handleFile = async (context, req) => {
-  const { source, fileId: documentId, recno, studentId: id } = req.body
+  const { source, documentId, recno, id } = req.body
   const { groups, upn } = req.token
 
   if (!upn) {
