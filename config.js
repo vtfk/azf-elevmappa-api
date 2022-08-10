@@ -3,6 +3,7 @@ const getPropName = prop => {
 
   if (prop === 'baseurl') return 'baseUrl'
   if (prop === 'statuscodes') return 'statusCodes'
+  if (prop === 'excludedenterprises') return 'excludedEnterprises'
 
   return prop
 }
@@ -11,6 +12,7 @@ const getPropValue = (prop, value) => {
   if (['true', 'false'].includes(value.toLowerCase())) return value.toLowerCase() === 'true'
   if (prop === 'statuses') return value.split(',')
   if (prop === 'statusCodes') return value.split(',').map(code => code.toUpperCase())
+  if (prop === 'excludedEnterprises') return value.split(',').map(code => Number.parseInt(code)).filter(code => !isNaN(code))
 
   return value
 }
@@ -34,7 +36,8 @@ const getActiveSources = () => {
       const newSourceObj = {
         internal,
         statuses: ['Under behandling'],
-        statusCodes: ['J', 'E', 'F']
+        statusCodes: ['J', 'E', 'F'],
+        excludedEnterprises: []
       }
       newSourceObj[prop] = value
       sources.push(newSourceObj)
