@@ -259,3 +259,4 @@ This will be constructed to a source object like this:
 ## Related
 
 - [azf-pifu-api](https://github.com/vtfk/azf-pifu-api) - PIFU service for MinElev, MinElev-leder and Elevmappa
+- [@vtfk/p360](https://github.com/vtfk/p360) - Node wrapper for Public 360 SIF RPC Service from [Tieto](https://www.tieto.no/)
