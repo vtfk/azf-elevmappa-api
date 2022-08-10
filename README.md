@@ -218,7 +218,7 @@ If you want to debug end-user as a **rådgiver**, set `DEMO_ACCESS_GROUPS` to a 
 
 ### P360 source(s)
 
-This API supports multiple **P360** sources in both *RPC* (**preferred**) and *SOAP* (**please don't**)
+This API supports multiple **P360** sources in *RPC*
 
 You add a source as a series of well named environment variables in `local.settings.json` for development and as `Application settings` in **Azure function** for production.
 
@@ -235,10 +235,7 @@ You add a source as a series of well named environment variables in `local.setti
 ```json
 "P360_VTFKINT_NAME": "VTFK Intern",
 "P360_VTFKINT_ENABLED": true,
-"P360_VTFKINT_TYPE": "RPC", // must be RPC or SOAP
-"P360_VTFKINT_TOKEN": "token", // only used for RPC, can and should be ignored for SOAP
-"P360_VTFKINT_USERNAME": "username", // only used for SOAP, can and should be ignored for RPC
-"P360_VTFKINT_PASSWORD": "password", // only used for SOAP, can and should be ignored for RPC
+"P360_VTFKINT_TOKEN": "token",
 "P360_VTFKINT_BASEURL": "http://360server.com:3001",
 "P360_VTFKINT_STATUSES": "Under behandling,Avsluttet", // 'Under behandling' is used for archives in production. 'Avsluttet' is used for historical archives. If this one is left out, 'Under behandling' will be used! Can contain multiple values separated by ',' (comma)
 "P360_VTFKINT_STATUSCODES": "J,E,F", // 'J' is for Journalført. 'E' is for Ekspedert. 'F' is for Ferdig. If this one is left out, 'J,E,F' will be used! Can contain multiple values separated by ',' (comma)
@@ -251,10 +248,7 @@ This will be constructed to a source object like this:
   "internal": "VTFKINT",
   "name": "VTFK Intern",
   "enabled": true,
-  "type": "RPC",
   "token": "token",
-  "username": "username",
-  "password": "password",
   "baseUrl": "http://360server.com:3001",
   "statuses": ["Under behandling", "Avsluttet"],
   "statusCodes": ["J", "E", "F"],
