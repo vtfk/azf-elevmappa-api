@@ -235,6 +235,7 @@ You add a source as a series of well named environment variables in `local.setti
 ```json
 "P360_VTFKINT_NAME": "VTFK Intern",
 "P360_VTFKINT_ENABLED": true,
+"P360_VTFKINT_DISABLEFILES": false, // If this is set to true, files will not be possible to retrieve from this source. If this one is left out, it will default to false
 "P360_VTFKINT_TOKEN": "token",
 "P360_VTFKINT_BASEURL": "http://360server.com:3001",
 "P360_VTFKINT_STATUSES": "Under behandling,Avsluttet", // 'Under behandling' is used for archives in production. 'Avsluttet' is used for historical archives. If this one is left out, 'Under behandling' will be used! Can contain multiple values separated by ',' (comma)
@@ -248,6 +249,7 @@ This will be constructed to a source object like this:
   "internal": "VTFKINT",
   "name": "VTFK Intern",
   "enabled": true,
+  "disableFiles": false,
   "token": "token",
   "baseUrl": "http://360server.com:3001",
   "statuses": ["Under behandling", "Avsluttet"],

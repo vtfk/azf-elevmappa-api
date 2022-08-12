@@ -4,6 +4,7 @@ const getPropName = prop => {
   if (prop === 'baseurl') return 'baseUrl'
   if (prop === 'statuscodes') return 'statusCodes'
   if (prop === 'excludedenterprises') return 'excludedEnterprises'
+  if (prop === 'disablefiles') return 'disableFiles'
 
   return prop
 }
@@ -37,7 +38,8 @@ const getActiveSources = () => {
         internal,
         statuses: ['Under behandling'],
         statusCodes: ['J', 'E', 'F'],
-        excludedEnterprises: []
+        excludedEnterprises: [],
+        disableFiles: false
       }
       newSourceObj[prop] = value
       sources.push(newSourceObj)
