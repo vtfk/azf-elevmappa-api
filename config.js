@@ -64,6 +64,7 @@ module.exports = {
   MONGODB_CONNECTION: process.env.MONGODB_CONNECTION,
   MONGODB_COLLECTION: process.env.MONGODB_COLLECTION,
   MONGODB_NAME: process.env.MONGODB_NAME,
+  MONGODB_SKIP_AUDIT: (process.env.MONGODB_SKIP_AUDIT && process.env.MONGODB_SKIP_AUDIT === 'true') || false,
   PAPERTRAIL_DISABLE_LOGGING: (process.env.PAPERTRAIL_DISABLE_LOGGING && process.env.PAPERTRAIL_DISABLE_LOGGING === 'true') || false,
   PIFU: {
     URL: process.env.PIFU_URL,

@@ -197,6 +197,7 @@ Put these in your `local.settings.json` file:
 "MONGODB_CONNECTION": "mongodb+srv://username:password@host.mongodb.net?retryWrites=true&w=majority",
 "MONGODB_COLLECTION": "elevmappa",
 "MONGODB_NAME": "elevmappa",
+"MONGODB_SKIP_AUDIT": false, // if this is set to true, audit logs will not be created! DO NOT ACTIVATE IN PRODUCTION!
 "PIFU_URL": "https://api.com/pifu/v3",
 "PIFU_JWT_SECRET": "something really really secret",
 ```
