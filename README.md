@@ -99,58 +99,130 @@ Returns an object of given student with available documents
   "documents": [
     {
       "source": "TFK",
-      "id": "16/03875-1",
+      "accessCodeDescription": "Offl §13 taushetsplikt",
+      "contacts": [
+        {
+					"ReferenceNumber": "12345678920",
+					"ExternalId": null,
+					"Role": "Avsender",
+					"SearchName": "Bjarne Betjent",
+					"ContactRecno": "751616",
+					"Address": "",
+					"ZipCode": "0666",
+					"ZipPlace": "Oslo",
+					"Country": "Norge",
+					"Email": ""
+				},
+				{
+					"ReferenceNumber": null,
+					"ExternalId": "",
+					"Role": "Mottaker",
+					"SearchName": "Robot",
+					"ContactRecno": "736804",
+					"Address": "Postboks 2844\n",
+					"ZipCode": "3702",
+					"ZipPlace": "SKIEN",
+					"Country": "Norge",
+					"Email": ""
+				}
+      ],
+      "category": "Dokument inn",
       "date": "2020-03-17T02:12:01",
       "displayDate": "17.03.2020",
-      "docId": "20/00345-1",
+      "disableFiles": false,
+      "documentNumber": "20/00345-1",
       "title": "Lullabies from the edge",
       "files": [
         {
-          "from": "PPT",
-          "to": "Bamble Videregående skole",
-          "date": "2020-03-17",
-          "category": "",
           "title": "Sakkyndig vurdering.pdf",
-          "file": "1234",
-          "recno": 1234
+          "recno": 1234,
+          "relation": "Hoveddokument"
         }
       ]
     },
     {
       "source": "TFK",
-      "id": "16/03875-2",
+      "accessCodeDescription": "Offl §13 taushetsplikt",
+      "contacts": [
+        {
+					"ReferenceNumber": "12345678920",
+					"ExternalId": null,
+					"Role": "Avsender",
+					"SearchName": "Bjarne Betjent",
+					"ContactRecno": "751616",
+					"Address": "",
+					"ZipCode": "0666",
+					"ZipPlace": "Oslo",
+					"Country": "Norge",
+					"Email": ""
+				},
+				{
+					"ReferenceNumber": null,
+					"ExternalId": "",
+					"Role": "Mottaker",
+					"SearchName": "Robot",
+					"ContactRecno": "736804",
+					"Address": "Postboks 2844\n",
+					"ZipCode": "3702",
+					"ZipPlace": "SKIEN",
+					"Country": "Norge",
+					"Email": ""
+				}
+      ],
+      "category": "Dokument inn",
       "date": "2020-03-17T02:12:01",
       "displayDate": "17.03.2020",
-      "docId": "20/00345-1",
+      "disableFiles": false,
+      "documentNumber": "20/00345-1",
       "title": "Salige reker",
       "files": [
         {
-          "from": "PPT",
-          "to": "Bamble Videregående skole",
-          "date": "2020-03-17",
-          "category": "",
           "title": "Sakkyndig vurdering.pdf",
-          "file": "1234",
-          "recno": 1234
+          "recno": 1234,
+          "relation": "Hoveddokument"
         }
       ]
     },
     {
       "source": "VTFK Sikker",
-      "id": "20/00345-1",
+      "accessCodeDescription": "Offl §13 taushetsplikt",
+      "contacts": [
+        {
+          "ReferenceNumber": "12345678920",
+          "ExternalId": null,
+          "Role": "Avsender",
+          "SearchName": "Bjarne Betjent",
+          "ContactRecno": "751616",
+          "Address": "",
+          "ZipCode": "0666",
+          "ZipPlace": "Oslo",
+          "Country": "Norge",
+          "Email": ""
+        },
+        {
+          "ReferenceNumber": null,
+          "ExternalId": "",
+          "Role": "Mottaker",
+          "SearchName": "Robot",
+          "ContactRecno": "736804",
+          "Address": "Postboks 2844\n",
+          "ZipCode": "3702",
+          "ZipPlace": "SKIEN",
+          "Country": "Norge",
+          "Email": ""
+        }
+      ],
+      "category": "Dokument inn",
       "date": "2020-03-17T02:12:01",
       "displayDate": "17.03.2020",
-      "docId": "20/00345-1",
+      "disableFiles": false,
+      "documentNumber": "20/00345-1",
       "title": "It came from Søre Ål",
       "files": [
         {
-          "from": "PPT",
-          "to": "Bamble Videregående skole",
-          "date": "2020-03-17",
-          "category": "",
           "title": "Sakkyndig vurdering.pdf",
-          "file": "1234",
-          "recno": 1234
+          "recno": 1234,
+          "relation": "Hoveddokument"
         }
       ]
     }
@@ -164,9 +236,9 @@ Returns an object of given student with available documents
 ```json
 {
   "source": "VTFK Sikker",
-  "fileId": "20/00345-1",
+  "documentId": "20/00345-1",
   "recno": 1234,
-  "studentId": "0205helgeg"
+  "id": "0205helgeg"
 }
 ```
 
@@ -184,7 +256,7 @@ You'll need an azure tenant and a **JWT secret** and **Endpoint url** for your P
 
 ### Environment variables
 
-Put these in your `local.settings.json` file:
+Put these in your `local.settings.json` file under the `Values` section:
 
 ```json
 "AUTH_ISS": "https://login.microsoftonline.com/%azure-tenant-guid%/v2.0", // this should be set as empty in local development
@@ -200,6 +272,14 @@ Put these in your `local.settings.json` file:
 "MONGODB_SKIP_AUDIT": false, // if this is set to true, audit logs will not be created! DO NOT ACTIVATE IN PRODUCTION!
 "PIFU_URL": "https://api.com/pifu/v3",
 "PIFU_JWT_SECRET": "something really really secret",
+```
+
+Put `CORS` setup in a separate section in your `local.settings.json` file:
+
+```json
+"Host": {
+  "CORS": "*"
+}
 ```
 
 > If you want to enable `Papertrail` logging, add these environment variables:<br>
