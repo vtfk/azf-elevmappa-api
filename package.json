@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Backend API for Elevmappa",
   "scripts": {
+    "start": "func start",
     "test": "standard"
   },
   "author": {
