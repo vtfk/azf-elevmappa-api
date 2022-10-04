@@ -1,6 +1,6 @@
 {
   "name": "azf-elevmappa-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Backend API for Elevmappa",
   "scripts": {
     "start": "func start",
