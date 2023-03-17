@@ -24,7 +24,7 @@
   "dependencies": {
     "@alheimsins/p360": "1.0.4",
     "@vtfk/logger": "4.3.2",
-    "@vtfk/p360": "1.4.1",
+    "@vtfk/p360": "1.4.3",
     "axios": "0.27.2",
     "azure-ad-verify-token": "1.1.2",
     "dayjs": "1.11.7",
