@@ -56,8 +56,8 @@ module.exports = {
     issuer: process.env.AUTH_ISS || undefined,
     audience: process.env.AUTH_AUD || process.env.AUTH_CLIENT_ID || undefined
   },
-  ACCESS_GROUP_PREFIX: process.env.ACCESS_GROUP_PREFIX || 'OF-',
-  ACCESS_GROUP_POSTFIX: process.env.ACCESS_GROUP_POSTFIX || 'TILGANGELEVMAPPA',
+  ACCESS_GROUP_PREFIX: process.env.ACCESS_GROUP_PREFIX || 'TILGANG-ELEVDOK-',
+  ACCESS_GROUP_POSTFIX: process.env.ACCESS_GROUP_POSTFIX || 'RADGIVER',
   DEMO: (process.env.DEMO && process.env.DEMO === 'true') || false,
   DEMO_ACCESS_GROUPS: (process.env.DEMO_ACCESS_GROUPS && process.env.DEMO_ACCESS_GROUPS.split(',')) || [],
   DEMO_USER: process.env.DEMO_USER || undefined,
