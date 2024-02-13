@@ -36,8 +36,8 @@ const getActiveSources = () => {
       // create source object
       const newSourceObj = {
         internal,
-        statuses: ['Under behandling'],
-        statusCodes: ['J', 'E', 'F'],
+        statuses: ['Under behandling', 'Avsluttet'],
+        statusCodes: ['J', 'E', 'F', 'A'], // Journalført, ekspedert, ferdig fra ansvarlig, arkivert
         excludedEnterprises: [],
         disableFiles: false
       }
